@@ -11,11 +11,11 @@ function createCard(title, cName, views, monthsOld, duration, thumbnail) {
   let million = 1000000;
   let k = 1000;
   if (views >= million) {
-    let v = views / million + "M";
+    let v = Math.floor(views / million) + "M";
     v = v.toString();
     ans.innerText = `${v}`;
   } else if (views >= k) {
-    let v = views / k; // Update the variable views here
+    let v = Math.floor(views / k); // Update the variable views here
     v = v.toString();
     ans.innerText = `${v}k`;
   } else {
